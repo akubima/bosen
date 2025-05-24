@@ -7,8 +7,11 @@ class ViewComponentFooter(ViewsComponentsABC):
         super().__init__(frame)
 
     def render(self):
-        return ctk.CTkLabel(master=self.frame, text='\u00A9 2025 Bima Mukhlisin Bil Sajjad, Revaldi Rifwianda, '
-                                                    'Dafa Dzaki Putra Husada under MIT License \u00B7 Version ' + os.getenv('APP_VERSION'), font=ctk.CTkFont(size=10)).pack()
+        ctk.CTkLabel(master=self.frame, text=os.getenv('APP_DESCRIPTION') + ' \u00B7 \u00A9 2025 Bima Mukhlisin Bil '
+                                                                            'Sajjad, '
+                                                                           'Revaldi Rifwianda, '
+                                                    'Dafa Dzaki Putra Husada under MIT License \u00B7 Version ' +
+                                                    os.getenv('APP_VERSION'), font=ctk.CTkFont(size=12)).grid(padx=10)
     def hide(self):
         for child in self.frame.winfo_children():
             self.grid_config[child] = child.grid_info()

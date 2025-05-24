@@ -1,7 +1,8 @@
+import controller
 import customtkinter as ctk
-import view.index_view as index_view
+from view import search_view
 
-class IndexController:
+class SearchController:
     _instance = None
 
     def __new__(cls, *args, **kwargs):
@@ -17,9 +18,28 @@ class IndexController:
         self.fc = fc
         self.fb = fb
 
-        self.view = index_view.IndexView(fc)
+        self.view = search_view.SearchView(self.ft)
+
+        self.category = None
+        self.keyword = None
+
+        self.flag_insearch = False
 
         self._initialized = True
+
+    def search(self, category: ctk.StringVar, keyword: ctk.StringVar):
+        self.category = category
+        self.keyword = keyword
+
+        controller.index.view.hide()
+        self.view.render()
+        self.view.hide()
+
+        self.flag_insearch = True
+
+        self.view.show()
+
+        self.flag_insearch = False
 
 
 if __name__ == '__main__':

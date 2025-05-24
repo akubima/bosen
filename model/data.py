@@ -1,6 +1,6 @@
 from types import MappingProxyType
 
-available_search_keyword = MappingProxyType({
+available_search_categories = MappingProxyType({
     'intitle': 'Title',
     'inauthor': 'Author',
     'inpublisher': 'Publisher',
