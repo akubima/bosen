@@ -13,12 +13,12 @@ Practicum course (SVRI214208) taught by Dr. Sahirul Alam, S.T., M.Eng.
 ### How to run:
 1. Install Python ^3.13 **if have not**. (https://www.python.org/downloads/)
 2. Install PIP **only if it is not included in the Python installation** (https://pip.pypa.io/en/stable/installation/)
-3. Clone this repository's main branch:
+3. Open a terminal emulation program (e.g., Command Prompt, PowerShell, or a shell) from inside the directory.
+4. Clone this repository's main branch:
 ```
 git clone https://github.com/akubima/bosen.git --branch=main
 ```
-4. Navigate to the cloned repository directory.
-5. Open a terminal emulation program (e.g., Command Prompt, PowerShell, or a shell) from inside the directory.
+5. Navigate to the cloned repository directory. 
 6. Install all the requirements listed in requirements.txt:
 ```
 pip install -r requirements.txt
