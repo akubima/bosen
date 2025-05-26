@@ -30,5 +30,5 @@ python app.py
 
 ### Contributors:
 - [Bima Mukhlisin Bil Sajjad](https://github.com/akubima)
-- [Revaldi Rifwianda](https://github.com/DafaDz99)
-- [Dafa Dzaki Putra Husada](https://github.com/revaldiii)
+- [Revaldi Rifwianda](https://github.com/revaldiii)
+- [Dafa Dzaki Putra Husada](https://github.com/DafaDz99)
