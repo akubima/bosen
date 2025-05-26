@@ -23,7 +23,7 @@ git clone https://github.com/akubima/bosen.git --branch=main
 ```
 pip install -r requirements.txt
 ```
-7. After the setup is complete, run the main program by executing:
+7. Run the main program by executing:
 ```
 python app.py
 ```
