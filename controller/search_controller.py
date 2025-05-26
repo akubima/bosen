@@ -3,6 +3,7 @@ import controller
 import customtkinter as ctk
 from model.search_model import SearchModel
 from view import search_view
+from view.components.books import ViewComponentBooks
 from view.components.error import ViewComponentError
 from CTkMessagebox import CTkMessagebox
 
@@ -56,6 +57,7 @@ class SearchController:
 
         # FETCH DATA
         try:
+            print(self.category_key, self.keyword)
             response = SearchModel.api_search(self.category_key, self.keyword)
             response_data: dict = dict(response.json())
         except Exception as e:
@@ -72,7 +74,7 @@ class SearchController:
             if response_data['totalItems'] == 0:
                 ViewComponentMessage(self.fc, 'No Results Found', f'There are no books with {self.category}: {self.keyword}. Try a different search term!').render()
             else:
-                ctk.CTkLabel(master=self.fc, text=response_data['items'][0]['volumeInfo']['title']).pack()
+                ViewComponentBooks(self.fc, response_data['items'][:10]).render()
                 print(response_data['items'][0]['volumeInfo']['title'])
         else:
             ViewComponentError(frame=self.fc, message=getattr(getattr(response_data, 'error', None), 'message',None)).render()

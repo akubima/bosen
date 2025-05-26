@@ -21,7 +21,7 @@ class AppController:
 
         self.window = ctk.CTk()
         self.window.after(0, lambda:self.window.state('zoomed'))
-        self.window.minsize(800, 600)
+        self.window.minsize(1280, 720)
         self.window.title(os.getenv('APP_NAME') + ' - ' + os.getenv('APP_FULL_NAME'))
 
         self.ft = ctk.CTkFrame(master=self.window, fg_color='transparent')
