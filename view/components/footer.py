@@ -8,7 +8,8 @@ class ViewComponentFooter(ViewsComponentsABC):
 
     def render(self):
         ctk.CTkLabel(master=self.frame, text=os.getenv('APP_DESCRIPTION') + ' \u00B7 \u00A9 2025 Bima M. B. Sajjad, '
-                                                                            'Revaldi R., Dafa D. P. Husada '
+                                                                            'Revaldi R., Dafa D. P. Husada, '
+                                                                            'Noni C. K. Matatar '
                                                                             'under MIT License \u00B7 Version ' + os.getenv('APP_VERSION'), font=ctk.CTkFont(size=12)).grid(padx=10)
 
     def hide(self):
