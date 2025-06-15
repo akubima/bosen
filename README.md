@@ -32,3 +32,4 @@ python app.py
 - [Bima Mukhlisin Bil Sajjad](https://github.com/akubima)
 - [Revaldi Rifwianda](https://github.com/revaldiii)
 - [Dafa Dzaki Putra Husada](https://github.com/DafaDz99)
+- Noni Cindy Klaudia Matatar
